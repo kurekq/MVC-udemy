@@ -1,0 +1,16 @@
+﻿@model NET_MVC_SZKOLENIE.Models.Movie
+
+@if (Model != null)
+{
+    <ul>
+        Oceny filmu @Model.Name
+        @foreach (var r in Model.GetRates())
+        {
+            <li>@r.RateBy.Name (lat: @r.RateBy.Age) - @r.Rate/10</li>
+        }
+    </ul>
+} else {
+    <h1>Nieoczekiwany błąd!!!</h1>
+}
+
+

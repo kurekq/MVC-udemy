@@ -1,0 +1,41 @@
+﻿@model NET_MVC_SZKOLENIE.Models.CustomerDataView
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.ValidationSummary(true, "Uzupełnij wszystkie błędy!")
+<div class="form-group">
+    @Html.LabelFor(m => m.Customer.Name)
+    @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Customer.Name)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Customer.Age)
+    @Html.TextBoxFor(m => m.Customer.Age, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Customer.Age)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Customer.Sex)
+    @Html.DropDownListFor(m => m.SexId, Model.Sexes, "Wybierz płeć", new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.SexId)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Customer.Description)
+    @Html.TextBoxFor(m => m.Customer.Description, new { @class = "form-control" })
+</div>
+
+<div class="form-check">
+    <label class="form-check-label">
+        @Html.CheckBoxFor(m => m.Customer.IsRich, new { @class = "form-check-input" }) Czy bogaty?
+        @Html.ValidationMessageFor(m => m.Customer.IsRich)
+    </label>
+</div>
+<br />
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

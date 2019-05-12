@@ -1,0 +1,26 @@
+﻿@model NET_MVC_SZKOLENIE.Models.MoviesDataView
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    int moviesCount = Model.Movies.Count();
+}
+<h1>SUPER FILMY</h1>
+<h4>Oto super filmy! Mamy ich aż @moviesCount. Oto one:</h4>
+
+@{  int counter = 1; 
+    <ul>
+        @foreach (var m in Model.Movies)
+        {
+            string hrefToDetails = $@"MovieRateDetails\{m.Id}";
+            <li> @counter. @m.Name (rok produkcji: @m.InCinemaFrom.Year), <a href="@hrefToDetails">średnia ocen: @m.GetAverageRate()</a></li>
+            @Html.Partial("_CustomersInMovie", m.GetWhoWatched())
+            counter++;
+        }
+    </ul>
+}
+
+
+

@@ -1,0 +1,18 @@
+﻿@model NET_MVC_SZKOLENIE.Models.CustomerDataView
+@{
+    ViewBag.Title = "CustomerAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Dodajemy klienta!</h1>
+
+@using (Html.BeginForm("AddCustomer", "Customer"))
+{
+    @Html.Partial("_CustomerForm", Model)
+
+    <div style="display: flex; max-width: 300px;">
+        <button type="submit" class="btn btn-primary flex_space" style="flex: 1">Dodaj klienta</button>
+        <button type="button" onclick="location.href='/Customers'" class="btn btn-danger" style="flex: 1">Anuluj</button>
+    </div>
+}
+

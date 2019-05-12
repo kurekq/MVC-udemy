@@ -1,0 +1,33 @@
+﻿@model List<NET_MVC_SZKOLENIE.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Wszyscy klienci naszego kina</h2>
+<div class="bs-component">
+    @foreach (NET_MVC_SZKOLENIE.Models.Customer c in Model)
+    {
+        string elementClass = "customer " + (c.Sex.Id == 0 ? "women" : "men");
+        string richnessTxt = c.IsRich ? "Ten koleś jest kurewsko bogaty. " : "Biedak jakich mało.";
+        string editCustomerLink = "./EditCustomer/" + c.Id;
+
+        <div class="@elementClass" style="width: 20rem; ">
+            <div class="card-body">
+                <a href="@editCustomerLink" class="customer_name"> @c.Name </a>
+                <p class="card-text">
+                    Lat: @c.Age <br />
+                    @richnessTxt
+                    @if (!string.IsNullOrEmpty(c.Description))
+                    {
+                        <br /> @c.Description
+                    }
+
+                </p>
+            </div>
+        </div>
+    }
+</div>
+<br />
+<button type="button" onclick="location.href='/AddCustomer'" class="btn btn-outline-success">+ Dodaj nowego klienta</button>

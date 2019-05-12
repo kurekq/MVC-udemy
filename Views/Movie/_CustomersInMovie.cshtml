@@ -1,0 +1,9 @@
+﻿@model List<NET_MVC_SZKOLENIE.Models.Customer>
+
+<ul>
+    Oglądali (partialModel):
+    @foreach (var c in Model)
+    {
+        <li>@c.Name (lat: @c.Age)</li>
+    }
+</ul>

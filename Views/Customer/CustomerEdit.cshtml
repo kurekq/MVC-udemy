@@ -1,0 +1,21 @@
+﻿@model NET_MVC_SZKOLENIE.Models.CustomerDataView
+@{
+    ViewBag.Title = "CustomerEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edytuj klienta!</h1>
+
+@using (Html.BeginForm("EditCustomer", "Customer"))
+{
+    @Html.Partial("_CustomerForm", Model)
+
+    @Html.HiddenFor(m => m.Customer.Id)
+
+    <div style="display: flex; max-width: 450px;">
+        <button type="submit" class="btn btn-success flex_space" style="flex: 1">Edytuj klienta</button>
+        <button type="reset" class="btn btn-primary flex_space" style="flex: 1">Cofnij zmiany</button>
+        <button type="button" onclick="location.href='/Customers'" class="btn btn-danger" style="flex: 1">Anuluj</button>
+    </div>
+
+}
