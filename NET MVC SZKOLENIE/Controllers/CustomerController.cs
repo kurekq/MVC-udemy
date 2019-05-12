@@ -41,6 +41,7 @@ namespace NET_MVC_SZKOLENIE.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddCustomer(CustomerDataView customerDV)
         {
             if (!ModelState.IsValid)
@@ -60,6 +61,7 @@ namespace NET_MVC_SZKOLENIE.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult EditCustomer(CustomerDataView customerDV)
         {
             if (!ModelState.IsValid)
