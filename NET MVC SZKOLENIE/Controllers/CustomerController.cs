@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace NET_MVC_SZKOLENIE.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomersController : Controller
     {
         [Route(@"AddCustomer")]
         public ViewResult CustomerAdd()

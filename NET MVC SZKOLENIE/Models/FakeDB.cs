@@ -58,6 +58,12 @@ namespace NET_MVC_SZKOLENIE.Models
             return new List<Customer>(Customers);
         }
 
+        public static Customer GetCustomer(int id)
+        {
+            CheckInitial();
+            return Customers.First(c => c.Id == id);
+        }
+
         public static List<Movie> GetMovies()
         {
             CheckInitial();
@@ -98,6 +104,12 @@ namespace NET_MVC_SZKOLENIE.Models
                 if (Customers[i].Id == c.Id)
                     Customers[i] = c;
             }
+        }
+
+        public static void DeleteCustomer(int id)
+        {
+            Customer c = Customers.First(x => x.Id == id);
+            Customers.Remove(c);
         }
 
         private static void InsertCustomers()

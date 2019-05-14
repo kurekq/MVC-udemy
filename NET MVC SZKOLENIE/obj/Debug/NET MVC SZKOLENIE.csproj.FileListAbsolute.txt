@@ -153,8 +153,13 @@ C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Web.WebPages
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\Newtonsoft.Json.xml
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\Antlr3.Runtime.pdb
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\obj\Debug\NET MVC SZKOLENIE.csprojAssemblyReference.cache
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\obj\Debug\NET MVC SZKOLENIE.csproj.CoreCompileInputs.cache
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\obj\Debug\NET MVC SZKOLENIE.csproj.CopyComplete
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\obj\Debug\NET MVC SZKOLENIE.dll
 C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\obj\Debug\NET MVC SZKOLENIE.pdb
+C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Net.Http.Formatting.dll
+C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Web.Http.dll
+C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Web.Http.WebHost.dll
+C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Net.Http.Formatting.xml
+C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Web.Http.xml
+C:\Users\p.kuriata\Documents\MVC udemy\NET MVC SZKOLENIE\bin\System.Web.Http.WebHost.xml
